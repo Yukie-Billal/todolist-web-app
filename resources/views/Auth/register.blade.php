@@ -26,13 +26,13 @@
                     <div class="card-body">
                         <form action="/register-act" method="POST">
                             @csrf
-                            {{-- <div class="form-group">
+                            <div class="form-group">
                               <label for="name">Nama</label>
                               <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="c" placeholder="Masukkan Nama Anda" value="{{ old('name') }}">
                               @error('name')
                                   <small class="text-danger">{{ $message }}</small>
                               @enderror
-                            </div> --}}
+                            </div>
                             <div class="form-group my-3">
                               <label for="email">Email</label>
                               <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="c" placeholder="Masukkan Email Anda" value="{{ old('email') }}">

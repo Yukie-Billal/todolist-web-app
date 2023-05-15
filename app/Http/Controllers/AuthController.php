@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TodoList;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -29,30 +31,13 @@ class AuthController extends Controller
             'password.required' => 'Harap Isi Password Anda',
             'password.min' => ':attribute kurang panjang'
         ]);
-
+        
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/beranda')->with('message', 'Berhasil Melakukan login');
         } else if (Auth::check()) {
             return redirect('/beranda');
         }
-
-        if (Auth::attempt($credentials)) {
-
-            $request->session()->regenerate();
-            return redirect()->intended('/beranda')->with('loginOk', 'Selamat Berhasil Login');
-
-        } elseif (Auth::check()) {
-
-            return redirect('/beranda');
-            
-        }
-        // session()->flash('message', 'Tidak Dapat Menemukan Akun');
-
-        // return redirect('/register');
-        // return response()->json([
-        //     $data = 'Not Found'
-        // ], 404);
 
         return redirect('/')->with('error', 'Login Failed, Something Wrong');
     }
@@ -68,7 +53,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $ValidateData['name'],
             'email' => $ValidateData['email'],
-            'password' => $ValidateData['password'],
+            'password' => Hash::make($ValidateData['password']),
         ]);
 
         if ($user) {

@@ -16,4 +16,12 @@ class Group extends Model
     {
         return $this->belongsTo(User::class, 'id');
     }
+    public function todo_list()
+    {
+        return $this->hasMany(TodoList::class);
+    }
+    public function group_details()
+    {
+        return $this->hasMany(GroupDetail::class);
+    }
 }

@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function todolist()
     {
-        return $this->belongsTo(TodoList::class);
+        return $this->hasMany(TodoList::class);
     }
     public function group()
     {
