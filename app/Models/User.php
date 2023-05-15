@@ -47,4 +47,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo(TodoList::class);
     }
+    public function group()
+    {
+        return $this->hasMany(Group::class, 'created_by');
+    }
 }

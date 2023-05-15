@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('todo_lists', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('isi');
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('group_name');
+            $table->string('access_code');
+            $table->foreignId('created_by')->constrained()->references('id')->on('users')->cascadeOnUpdate();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('todo_lists');
+        Schema::dropIfExists('groups');
     }
 };

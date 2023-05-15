@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
-    <style>
-        body {
-            background: rgb(0, 119, 255, .5);
-        }
-        a {
-            text-decoration: none;
-            color: #010101;
-            transition: .1s;
-        }
-    </style>
+    <x-links />
 
     <title>Belajar - Laravel Livewire</title>
+    <livewire:styles />
 </head>
 <body>
 
@@ -31,7 +21,8 @@
         </div>
     </div>
     
-    
-    <script src="{{ asset('bootstrap/bootstrap.min.js') }}"></script>
+    <livewire:scripts />
+    <x-scripts />
+    @stack('scripts')
 </body>
 </html>

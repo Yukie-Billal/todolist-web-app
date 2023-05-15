@@ -28,3 +28,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/todo-lists', TodoController::class);
 });
 Route::get('/users/users', [ApiController::class. 'index']);
+
+
+Route::get('/test', function () {
+    return view('test');
+});
