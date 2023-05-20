@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login - Todo List</title>
+    <title>Register - Todo List</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap.min.css') }}">
 </head>
 <body>
@@ -47,6 +47,10 @@
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
+                            <p>
+                                Have an account?  
+                                <a href="/"> Login</a>
+                            </p>
                             <div class="col-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary fw-semibold fs-6 px-3 py-1">Register</button>
                             </div>

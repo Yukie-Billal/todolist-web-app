@@ -45,6 +45,10 @@
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
+                            <p>
+                                Not have account?.
+                                <a href="/register">Register Here</a>
+                            </p>
                             <div class="col-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary fw-semibold fs-6 px-3 py-1">Sign In</button>
                             </div>
