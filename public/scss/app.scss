@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'variabel', 'mixins/mixin', 'utility-class/call', 'component/button', 'component/forms', 'component';
+
+.img {
+   background: rgba(158, 158, 158, 0.6);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   filter: grayscale(30%);
+   filter: brightness(0.8);
+   filter: opacity(30%);
+   filter: contrast(30%);
+}
+
+hr {
+   background: $neutral-40;
+}
+
+td {
+   font-size: 12px;
+}
+a {
+   text-decoration: none;
+   transition: .3s;
+}
+
+// .container {
+//    margin-top: 48px;
+// }
+// Component Class
+
+#navbarMenu {
+   .span {
+      height: 24px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid $primary-hover;
+      border-radius: 30px;
+      padding: 10px;
+      transition: .3s;
+      color: $neutral-90;
+
+      i {
+         font-size: 14px;
+         transform: translateY(.5px);
+         color: $neutral-90;
+      }
+
+      &:hover {
+         background: $primary-surface;
+      }
+   }
+   .navbar-menu-focus {
+      background: $primary-surface;
+   }
+}
+
+
+.icon-qty {
+   cursor: pointer;
+}
+
+.cursor-pointer {
+   cursor: pointer;
+}
+
+.shadow-1 {
+   box-shadow: $shadow-1;
+}
+.shadow-2 {
+   box-shadow: $shadow-2;
+}
+.shadow-3 {
+   box-shadow: $shadow-3;
+}
+
+.rounded {
+   border-radius: 30px;
+}
+
+.border-1 {
+   border: 1px solid $neutral-60;
+}
+
+.rounded.rounded-start {
+   border-radius: 30px 0 0 30px;
+}
+
+.rounded.rounded-end {
+   border-radius: 0 30px 30px 0;
+}
+
+.rounded.rounded-top {
+   border-radius: 30px 30px 0 0;
+}
+
+.rounded.rounded-end {
+   border-radius: 0 0 30px 30px;
+}
+
+/* Animate */
+@keyframes hide {
+   from {display: none;}
+   to {display: none;}
+}

@@ -1,0 +1,22 @@
+.hover-n-40 {
+   transition: .2s !important;
+
+   &:hover {
+      background-color: $neutral-40 !important;
+      border-radius: 10px !important;
+   }
+}
+
+.inner-shadow {
+   @include shadow-inner;
+}
+
+.mh-md {
+  min-height: 150px !important;
+}
+.mh-lg {
+  min-height: 250px !important;
+}
+.mh-xl {
+  min-height: 350px !important;
+}

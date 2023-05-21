@@ -1,0 +1,20 @@
+.input-form, textarea, input, .text-area-form, .select-form {
+    &.placeholder-s-r::placeholder{
+       font: $text-s-regular !important;
+    }
+    &.placeholder-s-m::placeholder{
+       font: $text-s-medium !important;
+    }
+    &.placeholder-m-r::placeholder{
+       font: $text-m-regular !important;
+    }
+    &.placeholder-m-m::placeholder{
+       font: $text-m-medium !important;
+    }
+    &.placeholder-l-r::placeholder{
+       font: $text-l-regular !important;
+    }
+    &.placeholder-l-m::placeholder{
+       font: $text-l-medium !important;
+    }
+ }
