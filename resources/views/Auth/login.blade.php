@@ -11,13 +11,13 @@
     <div class="container" style="height: 100vh">
         <div class="row justify-content-center align-items-center h-100">
             <div class="col-5">
-                @if (session('message'))
+                @if (session('registered'))
                 <div class="alert alert-success" role="alert">
-                    <strong>{{ session('message') }}</strong>
+                    <strong>{{ session('registered') }}</strong>
                 </div>
                 @endif
                 @if (session('error'))                    
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-danger" role="alert">
                     <strong>{{ session('error') }}</strong>
                 </div>
                 @endif

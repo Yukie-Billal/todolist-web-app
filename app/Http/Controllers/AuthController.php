@@ -25,18 +25,13 @@ class AuthController extends Controller
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:4'
-        ],[
-            'email.required' => 'Harap mengisi alamat :attribute anda',
-            'email.email' => 'Email harus sesuai dengan dns yang ada',
-            'password.required' => 'Harap Isi Password Anda',
-            'password.min' => ':attribute kurang panjang'
         ]);
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/beranda')->with('message', 'Berhasil Melakukan login');
+            return redirect()->intended('/home')->with('login-success');
         } else if (Auth::check()) {
-            return redirect('/beranda');
+            return redirect('/home');
         }
 
         return redirect('/')->with('error', 'Login Failed, Something Wrong');
@@ -57,7 +52,7 @@ class AuthController extends Controller
         ]);
 
         if ($user) {
-            return redirect('/')->with('message', 'Registrasi Berhasil, Silahkan Login');
+            return redirect('/')->with('registered');
         } else {
             return redirect('/register')->with('message', 'Terjadi kesalahan');
         }

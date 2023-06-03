@@ -1,6 +1,7 @@
 @for $border from 1 to 10 {
     .border-neutral-100-#{$border} {
         border: #{$border}px solid $neutral-100 !important;
+        @include border-create(#{$border}px solid $neutral-100 !important)
     }
     .border-neutral-90-#{$border} {
         border: #{$border}px solid $neutral-90 !important;
@@ -29,13 +30,4 @@
     .border-neutral-10-#{$border} {
         border: #{$border}px solid $neutral-10 !important;
     }
-}
-.x-border {
-    border-right: 1px solid $neutral-50 !important;
-    border-left: 1px solid $neutral-50 !important;
-}
-
-.y-border {
-    border-bottom: 1px solid $neutral-50 !important;
-    border-top: 1px solid $neutral-50 !important;
 }

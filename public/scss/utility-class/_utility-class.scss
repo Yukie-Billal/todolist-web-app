@@ -20,3 +20,7 @@
 .mh-xl {
   min-height: 350px !important;
 }
+
+.gray {
+  @include prefix(filter, grayscale(50%), moz webkit);
+}

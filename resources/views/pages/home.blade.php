@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="row justify-content-center">
+    {{-- <div class="row justify-content-center">
         <div class="col-9">
             <div class="card border-0">
                 <div class="card-body border-0">
@@ -81,5 +81,5 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-app-layout>

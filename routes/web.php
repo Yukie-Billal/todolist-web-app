@@ -23,7 +23,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/beranda', [TodoController::class, 'beranda']);
+    Route::get('/home', [TodoController::class, 'beranda']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::resource('/todo-lists', TodoController::class);
 });

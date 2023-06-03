@@ -25,3 +25,35 @@
     position: relative;
     border-radius: 25px 0 0 25px;
 }
+
+@mixin prefix($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+      -#{$prefix}-#{$property}: $value;
+    }
+    #{$property}: $value;
+}
+
+@mixin border-create($value) {
+    &.border-x {
+        border-right: $value;
+        border-left: $value;
+    }
+
+    &.border-y {
+        border-bottom: $value;
+        border-top: $value;
+    }
+
+    &.border-s {
+        border-left: $value;
+    }
+    &.border-e {
+        border-right: $value;
+    }
+    &.border-t {
+        border-top: $value;
+    }
+    &.border-b {
+        border-bottom: $value;
+    }
+}

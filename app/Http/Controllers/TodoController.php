@@ -9,7 +9,7 @@ class TodoController extends Controller
 {
     public function beranda()
     {
-        return view('pages.beranda', [
+        return view('pages.home', [
             'todos' => TodoList::orderByDesc('created_at')->get()
         ]);
     }
