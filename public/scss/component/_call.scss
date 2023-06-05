@@ -1,1 +1,4 @@
-@import 'button', 'forms', 'sidebar';
+@use '../variabel';
+@use '../mixins/mixin';
+
+@import 'button', 'forms', 'sidebar', 'navbar';

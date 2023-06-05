@@ -1,5 +1,5 @@
-<aside class="sidebar">
-    <div class="sidebar-brand bg-danger text-center py-2">
+<aside class="sidebar show">
+    <div class="sidebar-brand text-center py-2">
         <h3>Todo List</h3>
     </div>
     <div class="sidebar-content">

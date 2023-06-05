@@ -1,26 +1,35 @@
 .hover-n-40 {
-   transition: .2s !important;
+  transition: .2s !important;
 
-   &:hover {
-      background-color: $neutral-40 !important;
-      border-radius: 10px !important;
-   }
+  &:hover {
+    background-color: $neutral-40 !important;
+    border-radius: 10px !important;
+  }
 }
 
 .inner-shadow {
-   @include shadow-inner;
+  @include shadow-inner;
 }
 
 .mh-md {
   min-height: 150px !important;
 }
+
 .mh-lg {
   min-height: 250px !important;
 }
+
 .mh-xl {
   min-height: 350px !important;
 }
 
 .gray {
   @include prefix(filter, grayscale(50%), moz webkit);
+}
+
+.list-separator {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: $neutral-50;
 }

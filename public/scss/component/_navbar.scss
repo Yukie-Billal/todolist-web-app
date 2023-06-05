@@ -1,0 +1,53 @@
+.nav-content {
+  @include flex-box($justify :space-between, $align: center);
+  width: 100%;
+
+  & .menu-wrap {
+    @include flex-box($align : center);
+    gap: 6px;
+    position: relative;
+
+    & img,
+    span,
+    i {
+      cursor: pointer;
+    }
+
+    & .dropdown-menu-wrap {
+      width: 140px;
+      background: white;
+      box-shadow: $shadow-2;
+      top: 60px;
+      right: 8px;
+      padding: 1px;
+      border-radius: 2px;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: -10px;
+        border-left: 18px solid transparent;
+        border-bottom: 10px solid white;
+      }
+
+      & li.menu-list {
+        @include flex-box($align: center);
+        padding: 8px 12px;
+
+
+        & i {
+          font-size: 14px;
+          margin-right: 6px;
+        }
+
+        &:hover {
+          background: darken(#fff, 10);
+        }
+      }
+    }
+  }
+}
